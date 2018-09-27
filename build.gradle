@@ -1,0 +1,29 @@
+task buildAll {
+    group "build"
+    dependsOn ":backend:build"
+    dependsOn ":frontend:build"
+
+}
+
+task copyBackendToFrontEnd(type: Copy) {
+    dependsOn "buildAll"
+    from 'frontend/build'
+    into 'backend/build/resources/main/static'
+}
+
+task buildAndRunAll {
+    group "application"
+    dependsOn copyBackendToFrontEnd
+    dependsOn ":backend:bootRun"
+}
+
+task buildProductionJar {
+    group "build"
+    dependsOn copyBackendToFrontEnd
+    dependsOn ":backend:jar"
+    dependsOn ":backend:bootRepackage"
+    dependsOn "::backend:assemble"
+    doLast {
+        println "Production jar ready."
+    }
+}

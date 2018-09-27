@@ -1,0 +1,50 @@
+.calculation-history-wrapper {
+    background-color: #222;
+    padding: 20px;
+    color: white;
+
+}
+
+.calculation-history {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+body {
+    line-height: 1.25;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    table-layout: fixed;
+    background-color: #1c191c;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background: #1c191c;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}

@@ -1,0 +1,22 @@
+version 'unspecified'
+
+
+repositories {
+    mavenCentral()
+}
+
+
+task build(type:Exec){
+    workingDir '.'
+    commandLine 'npm', 'run', 'build'
+    group "build"
+
+}
+
+task bootRun(type:Exec){
+    workingDir '.'
+    commandLine 'npm', 'start'
+    group "application"
+
+}
+

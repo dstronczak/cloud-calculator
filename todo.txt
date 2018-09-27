@@ -1,0 +1,6 @@
+TO DO:
+* wrong results from backend
+* build - why bundled jar after second time
+* formatting and cleanup
+* table style
+* error handling (wrong expressions -> "Err" on calc)
