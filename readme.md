@@ -35,6 +35,12 @@ Before you attempt to start the backend make sure that `mongodb` in running. To 
 mongod
 ```
 
+Alse make sure to install all the npm dependencies by running:
+```
+cd frontend/
+npm install
+cd ..
+```
 #### Running backend only
 
 To build and run backend only in dev mode run this in project root:
